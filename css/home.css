@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.nav-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li {
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5rem;
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+.navbar-nav a.active1{
+    color:  #0988e2;
+} 
+
+.nav li :hover{
+    color:  #0988e2;
+    text-shadow: 5px 4px 3px #ffffff;
+}
+
+@media screen and (max-width:600px) {
+    .nav {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1rem 0;
+        height: 80px;
+    }
+    a{
+        margin: 0 1rem;
+        font-size: 25px;
+    }
+    .main {
+        flex-direction: column !important;
+        gap: 10rem !important;
+        height: 70vh !important;
+    }
+
+
+.item{
+    margin-left: 2rem;
+}
+.item .hello{
+font-size: 20px;
+}
+.item .name{
+font-size: 30px;
+}
+
+.text .detail {
+font-size: 25px;
+}
+.text .detail1 {
+font-size: 25px;
+}
+
+.text .detail1 span::after {
+    height: 35px;
+}
+
+.gallery {
+    display: grid; /* ใช้ grid layout เพื่อจัดรูปภาพ */
+    grid-template-columns: repeat(3, 1fr); /* แบ่งรูปภาพเป็น 3 คอลัมน์ */
+    gap: 0.5rem; /* ปรับระยะห่างระหว่างรูปภาพให้แคบลง */
+}
+
+.gallery span {
+    width: 100%; /* รูปภาพจะเต็มความกว้างของแต่ละคอลัมน์ */
+}
+
+.gallery img {
+    width: 100%; /* ให้รูปภาพยืดเต็มขนาดที่มี */
+    height: 100%; /* คงอัตราส่วนของรูปภาพ */
+}
+}
+
+.main{
+    display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 80vh;
+ gap: 35rem;
+}
+
+.text{
+    gap: 0.5rem;
+    display: flex;
+    width: auto;
+}
+
+.hello,
+.name,
+.detail,
+.detail1 {
+    font-family: "Prompt", sans-serif;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: left; 
+}
+.hello {
+    font-size: 50px; 
+}
+
+.name {
+    font-size: 60px;
+}
+
+.detail {
+    font-size: 50px;
+}
+
+.detail1 {
+    font-size: 50px;
+    color: #4c49e2;
+    margin-left: 2rem;
+}
+
+.detail1 span {
+    position: relative;
+}
+
+
+.detail1 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 68px;
+    width: 100%;
+    border-left: 2px solid blue;
+    animation: typing 3.5s steps(10) infinite;
+    background: #96ccf3;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+} 
+
+
+.gallery {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 35s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: perspective(1200px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1200px) rotateY(360deg);
+    }
+}
+
+span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: rgb(36, 0, 119);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none; /* ป้องกันไม่ให้วงกลมไปทับหรือบล็อกการคลิก */
+    z-index: 99999999; /* ให้วงกลมแสดงอยู่บนสุด */
+}

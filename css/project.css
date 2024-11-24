@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.nav-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li {
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5rem;
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+.navbar-nav a.active1{
+    color:  #0988e2;
+} 
+
+.nav li :hover{
+    color:  #0988e2;
+    text-shadow: 5px 4px 3px #ffffff;
+}
+
+p{
+text-align: start;
+font-family: "Prompt", sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 48px;
+color: #434343;
+margin: 2rem;
+}
+
+.box{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    width: 30rem;  
+    height: 30rem;  
+    padding: 2rem;  
+    background-color: #f4f4f4; 
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+/* จัดการกับ .detail */
+.detail {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;  
+    width: 100%;  
+}
+
+/* จัดการกับข้อความใน .detail */
+.project, .detailproject, .see {
+    margin: 0.5rem 0;  
+    font-size: 1.2rem;  
+    color: #333; 
+    text-align: center;  
+}
+
+.project{
+    font-family: "Prompt", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 48px;
+    color: #434343;
+}
+
+.detailproject{
+    padding-top: 8px;
+     font-family: "Prompt", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.see{
+    margin-top: 3rem;
+}
+
+
+
+
+/* กำหนดรูปแบบให้ปุ่ม */
+.open-modal-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-modal-btn:hover {
+    background-color: #0056b3;
+}
+
+/* กำหนดรูปแบบของ Modal */
+.modal {
+    display: none; /* ซ่อน modal ตอนแรก */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังมืด */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* กำหนดรูปแบบของเนื้อหาใน modal */
+.modal-content {
+    position: relative;
+    max-width: 1000px; /* กำหนดขนาดสูงสุด */
+    max-height: 80vh; /* กำหนดความสูงสูงสุด */
+    overflow-y: auto; /* เปิดการเลื่อนเมื่อเนื้อหามากเกินไป */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.close-btn {
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* 2 */
+.open-modal-btn2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-modal-btn2:hover {
+    background-color: #0056b3;
+}
+
+/* Modal (ซ่อนเมื่อไม่ได้เปิด) */
+.modal2 {
+    display: none; /* ซ่อน Modal ตอนแรก */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังมืด */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px; /* ให้มีช่องว่างรอบๆ */
+  }
+  
+  /* เนื้อหาของ Modal */
+  .modal-content2 {
+    position: relative; /* ให้ตำแหน่งของปุ่มกากบาทอยู่ภายใน */
+    max-width: 350rem; /* กำหนดขนาดสูงสุด */
+    max-height: 80vh; /* ความสูงสูงสุด */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto; /* เปิดการเลื่อนเมื่อเนื้อหามากเกินไป */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* ปุ่มกากบาท (ปิด Modal) */
+  .close-btn2 {
+    font-size: 40px;
+    position: absolute; /* ทำให้ปุ่มกากบาทอยู่ที่มุมขวาบน */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* สำหรับ Slideshow */
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+  
+  .name2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .work3 img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  
+  /* Fading animation */
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  
+  .work3 {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+/* end2 */
+/* 3 */
+.open-modal-btn3 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-modal-btn3:hover {
+    background-color: #0056b3;
+}
+
+/* Modal (ซ่อนเมื่อไม่ได้เปิด) */
+.modal3 {
+    display: none; /* ซ่อน Modal ตอนแรก */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังมืด */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px; /* ให้มีช่องว่างรอบๆ */
+  }
+  
+  /* เนื้อหาของ Modal */
+  .modal-content3 {
+    position: relative; /* ให้ตำแหน่งของปุ่มกากบาทอยู่ภายใน */
+    max-width: 300rem; /* กำหนดขนาดสูงสุด */
+    max-height: 80vh; /* ความสูงสูงสุด */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto; /* เปิดการเลื่อนเมื่อเนื้อหามากเกินไป */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* ปุ่มกากบาท (ปิด Modal) */
+  .close-btn3 {
+    font-size: 40px;
+    position: absolute; /* ทำให้ปุ่มกากบาทอยู่ที่มุมขวาบน */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* สำหรับ Slideshow */
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+  
+  .name3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .work3 img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  
+  /* Fading animation */
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  
+  .work3 {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+/* end3 */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .name1 {
+    display: flex;
+    flex-direction: column; /* จัดเรียงเนื้อหาภายในในแนวตั้ง */
+    justify-content: center; /* จัดตำแหน่งให้เนื้อหากลาง */
+    width: 100%;  /* กว้างเต็มพื้นที่ */
+    position: relative; /* กำหนดให้เป็นตำแหน่งสัมพัทธ์ */
+    max-width: 1000px; /* กำหนดขนาดสูงสุด */
+    height: auto; /* ให้เนื้อหาขยายได้ตามความสูงของเนื้อหาที่มี */
+    overflow-y: auto; /* เปิดการเลื่อนเมื่อเนื้อหามากเกินไป */
+}
+  .name1 img {
+   margin: 1rem;
+}
+
+  .deatailphoto p {
+    text-align: left;
+    font-family: "Prompt", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+    color: #434343;
+    margin: 2rem;
+  }
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  
+
+#textwork{
+    font-size: 15px; 
+}
+
+
+
+@media screen and (max-width:1100px) {
+    .nav {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1rem 0;
+        height: 80px;
+    }
+    a{
+        margin: 0 1rem;
+        font-size: 25px;
+    }
+ 
+    .box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .open-modal-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* ปรับขนาดของเนื้อหาใน modal */
+    .modal-content {
+        max-width: 90%;  /* ขนาดสูงสุดลดลงจาก 1000px เป็น 90% */
+        max-height: 70vh; /* ลดความสูงสูงสุดลง */
+        padding: 15px; /* ลดการ padding */
+    }
+  
+
+    .name1 {
+        display: flex;
+        flex-direction: column; /* จัดเรียงเนื้อหาภายในในแนวตั้ง */
+        justify-content: center; /* จัดตำแหน่งในแนวตั้งให้กึ่งกลาง */
+        align-items: center; /* จัดตำแหน่งในแนวนอนให้กึ่งกลาง */
+        width: 100%;
+        position: relative;
+        max-width: 1000px;
+        height: auto;
+        overflow-y: auto;
+        text-align: left;
+    }
+    /* ปรับขนาดของปุ่มปิด */
+    .close-btn {
+        font-size: 40px;
+    }
+
+    /* ปรับขนาดของรูปภาพใน name1 */
+    .name1 img {
+        margin: 0.5rem; /* ลดขนาด margin ของภาพ */
+        width: 350px;
+    }
+
+    /* ปรับขนาดข้อความใน deatailphoto */
+    .deatailphoto p {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    /* ลดขนาดของ caption text ใน slideshow */
+    .text {
+        font-size: 14px;  /* ลดขนาดข้อความ */
+        padding: 6px 10px;
+    }
+
+    /* ลดขนาดของ numbertext ใน slideshow */
+    .numbertext {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+}
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: rgb(36, 0, 119);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none; /* ป้องกันไม่ให้วงกลมไปทับหรือบล็อกการคลิก */
+  z-index: 99999999; /* ให้วงกลมแสดงอยู่บนสุด */
+}
+
+/* สไตล์ปุ่ม */
+.seemore {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* ให้ปุ่มมีความยาวพอดีกับข้อความ */
+}
+
+.seemore a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.seemore:hover {
+  background-color: #0056b3;
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+  width: 30rem;  
+  height: 15rem;  
+  padding: 2rem;  
+  background-color: #f4f4f4; 
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}

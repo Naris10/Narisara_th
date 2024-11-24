@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.nav-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li {
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5rem;
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+.navbar-nav a.active1{
+    color:  #0988e2;
+} 
+
+.nav li :hover{
+    color:  #0988e2;
+    text-shadow: 5px 4px 3px #ffffff;
+}
+
+
+
+@keyframes appear{
+    from{
+        opacity: 1;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.education,.softskill,.detail{
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+
+.aboutme{
+    justify-items: center;
+    margin: 5rem;
+}
+
+.item1{
+    margin-top: 15rem;
+    display: flex;
+    margin-bottom: 1rem;
+    align-content: center;
+    height: 50vh;
+}
+
+.item1 img {
+    width: 600px;
+    height: auto;
+    border-radius: 10%;
+    border:  1px solid white;
+}
+
+.text1 p {
+    font-family: "Prompt", sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    color:  #ffffff; 
+    padding-bottom: 1rem;
+}
+.item1 .text1 {
+    width: 800px;
+    padding: 2rem;
+    font-family: "Prompt", sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    color:  #ffffff;
+}
+
+.item2{
+    display: flex;
+    margin-bottom: 1rem;
+    align-content: center;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail{
+justify-content: center;
+}
+.education p {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-family: "Prompt", sans-serif;
+       font-weight: 800;
+       font-size: 50px;
+       line-height: 24px;
+       color: #FFFFFF;
+}
+
+
+
+.item2 .photo img {
+    width: 600px;
+    height: auto;
+    border-radius: 10%;
+    border:  1px solid white;
+}
+.item2 .text2 {
+    text-align: left; 
+    width: 40rem;
+    padding: 2rem;
+    font-family: "Prompt", sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    color:  #ffffff;
+}
+.item2 #textme1 {
+    margin-left: 1rem;
+    justify-items: center;
+    text-align: left; 
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+    line-height: 48px;
+    color:  #ffffff;
+    margin-left: 3rem;
+}
+.text2 img{
+    width: 60px; 
+    height: 50px;
+    padding-right: 1rem;
+}
+ 
+#texteducation,#texteducation1{
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+    line-height: 48px;
+    color:  #ffffff;
+}
+
+
+.detail p{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-family: "Prompt", sans-serif;
+       font-weight: 800;
+       font-size: 50px;
+       line-height: 24px;
+       color: #FFFFFF;
+}
+
+.item3 p {
+    text-align: left;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+/* Style สำหรับ .front */
+.front {
+    display: flex;  /* ใช้ Flexbox เพื่อจัดการการจัดเรียง */
+    justify-content: start;  /* จัดการระยะห่างระหว่างการ์ด */
+    align-items: center;  /* จัดการให้อยู่ในแนวนอนและกลาง */
+    flex-wrap: wrap;  /* ให้การ์ดย่อขนาดลงเมื่อหน้าจอเล็ก */
+    gap: 1rem;  /* ระยะห่างระหว่างการ์ด */
+    margin-left: 3rem;
+}
+.back {
+    display: flex;  /* ใช้ Flexbox เพื่อจัดการการจัดเรียง */
+    justify-content: start;  /* จัดการระยะห่างระหว่างการ์ด */
+    align-items: center;  /* จัดการให้อยู่ในแนวนอนและกลาง */
+    flex-wrap: wrap;  /* ให้การ์ดย่อขนาดลงเมื่อหน้าจอเล็ก */
+    gap: 1rem;  /* ระยะห่างระหว่างการ์ด */
+    margin-left: 3rem;
+}
+.tool {
+    display: flex;  /* ใช้ Flexbox เพื่อจัดการการจัดเรียง */
+    justify-content: start;  /* จัดการระยะห่างระหว่างการ์ด */
+    align-items: center;  /* จัดการให้อยู่ในแนวนอนและกลาง */
+    flex-wrap: wrap;  /* ให้การ์ดย่อขนาดลงเมื่อหน้าจอเล็ก */
+    gap: 1rem;  /* ระยะห่างระหว่างการ์ด */
+    margin-left: 3rem;
+}
+.skill {
+    display: flex;  /* ใช้ Flexbox เพื่อจัดการการจัดเรียง */
+    justify-content: start;  /* จัดการระยะห่างระหว่างการ์ด */
+    align-items: center;  /* จัดการให้อยู่ในแนวนอนและกลาง */
+    flex-wrap: wrap;  /* ให้การ์ดย่อขนาดลงเมื่อหน้าจอเล็ก */
+    gap: 1rem;  /* ระยะห่างระหว่างการ์ด */
+    margin-left: 3rem;
+}
+
+.card{
+    background-color: #fff;
+    border-radius:  10px;
+    max-width: auto;
+    max-height:50px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* เพิ่มเงาให้การ์ด */
+}
+.card p{
+    font-size: 1.2rem;  /* ขนาดฟอนต์ */
+    color: #333;  /* สีข้อความ */
+    font-weight: bold;  /* ทำให้ข้อความหนา */
+    margin: 0;  /* ลบ margin ของข้อความ */
+    text-align: center;  /* จัดข้อความให้อยู่กลาง */
+    margin-right: 3rem;  /* เพิ่มระยะห่างขวา */
+} 
+
+
+
+
+@media screen and (max-width:600px) {
+    .nav {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1rem 0;
+        height: 80px;
+    }
+    a{
+        margin: 0 1rem;
+        font-size: 25px;
+    }
+
+    .item1 ,.item2 {
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item1 img {
+        width: 400px;
+        border-radius: 10%;
+        border:  1px solid white;
+    }
+
+    .text1 p {
+        font-size: 35px;
+
+    }
+    .item1 .text1  {
+        width: 500px;
+        font-size: 20px;
+    }
+
+    .item2 {
+        display: flex;
+        flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+        align-items: center; /* จัดให้ทุกอย่างอยู่ตรงกลาง */
+        margin-bottom: 1rem;
+        height: auto; /* เปลี่ยนเป็น auto เพื่อให้ความสูงไม่คงที่ */
+        gap: 1rem; /* ปรับระยะห่างระหว่างเนื้อหาภายใน .item2 */
+    }
+
+    /* สำหรับ .education */
+    .education {
+        margin-top: 25rem;
+        justify-content: center;
+        text-align: center; /* ทำให้ข้อความอยู่กลาง */
+    }
+
+    /* สำหรับ .education p */
+    .education p {
+       text-align: left;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        padding-left: 1rem; /* ลดระยะห่างทางซ้าย */
+        font-size: 30px; /* ลดขนาดฟอนต์ */
+        line-height: 28px; /* ปรับระยะห่างระหว่างบรรทัด */
+    }
+
+    /* สำหรับ .item2 .photo img */
+    .item2 .photo img {
+        width: 100%; /* ทำให้รูปภาพเต็มความกว้างของ container */
+        height: auto;
+        border-radius: 10%;
+        border: 1px solid white;
+    }
+
+   /* สำหรับ .item2 .text2 */
+.item2 .text2 {
+    width: 100%; /* ให้พื้นที่เต็มความกว้าง */
+    padding: 1rem; /* ลดการ padding */
+    font-family: "Prompt", sans-serif;
+    font-size: 18px; /* ลดขนาดฟอนต์ */
+    line-height: 30px; /* ปรับระยะห่างระหว่างบรรทัด */
+    text-align: left; /* ทำให้ข้อความทั้งหมดใน .text2 ชิดซ้าย */
+}
+
+/* สำหรับ #textme1 */
+.item2 #textme1 {
+    margin-left: 0; /* ยกเลิก margin-left เพื่อให้ข้อความอยู่ชิดซ้าย */
+    text-align: left; /* ปรับให้ข้อความอยู่ชิดซ้าย */
+    font-size: 15px; /* ลดขนาดฟอนต์ */
+    line-height: 30px; /* ปรับระยะห่างระหว่างบรรทัด */
+    color: #ffffff;
+}
+
+/* สำหรับ .text2 img */
+.text2 img {
+    width: 50px; /* ลดขนาดของไอคอน */
+    height: 50px;
+    padding-right: 1rem; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+    text-align: left; /* ทำให้ไอคอนชิดซ้าย */
+}
+
+/* สำหรับ #texteducation และ #texteducation1 */
+#texteducation, #texteducation1 {
+    margin-top: 2rem;
+    text-align: left; /* ทำให้ข้อความใน #texteducation และ #texteducation1 ชิดซ้าย */
+    font-size: 18px; /* ลดขนาดฟอนต์ */
+    line-height: 28px; /* ปรับระยะห่างระหว่างบรรทัด */
+}
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: rgb(36, 0, 119);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none; /* ป้องกันไม่ให้วงกลมไปทับหรือบล็อกการคลิก */
+    z-index: 99999999; /* ให้วงกลมแสดงอยู่บนสุด */
+}
